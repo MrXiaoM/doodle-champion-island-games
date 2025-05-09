@@ -24,6 +24,7 @@ jobs:
           echo "@echo off">>start.cmd
           echo "echo. HTTP Server starting...">>start.cmd
           echo "if not exist "temp" (mkdir temp)">>start.cmd
+          echo "if not exist "logs" (mkdir logs)">>start.cmd
           echo "start nginx">>start.cmd
           echo "echo. URL: http://localhost/">>start.cmd
           echo "echo. ">>start.cmd
