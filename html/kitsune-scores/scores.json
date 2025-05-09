@@ -1,0 +1,33 @@
+{
+    "Comments": "已经定格了的四个队伍总分，我添加了一点不影响运行的注释。想让岛上的灯笼变色就改相应队伍的分数。",
+    "Timestamp": {
+        "value": "2021-08-18T00:36:06.286Z"
+    },
+    "RecordCountTotal": 331347419,
+    "GlobalScoresTotal": [
+        {
+            "Comments": "蓝队",
+            "TeamId": 0,
+            "GlobalScore": 149581776,
+            "RecordCount": 71474212
+        },
+        {
+            "Comments": "红队",
+            "TeamId": 1,
+            "GlobalScore": 245028264,
+            "RecordCount": 114389304
+        },
+        {
+            "Comments": "绿队",
+            "TeamId": 2,
+            "GlobalScore": 164945161,
+            "RecordCount": 73335128
+        },
+        {
+            "Comments": "黄队",
+            "TeamId": 3,
+            "GlobalScore": 166908113,
+            "RecordCount": 72148775
+        }
+    ]
+}
