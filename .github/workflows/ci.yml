@@ -1,0 +1,46 @@
+name: Development Build
+on:
+  push:
+    branches: [ "main" ]
+    paths-ignore:
+      - '*.md'
+  pull_request:
+    branches: [ "main" ]
+    paths-ignore:
+      - '*.md'
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download Nginx Windows
+        run: |
+          wget https://nginx.org/download/nginx-1.28.0.zip
+          unzip nginx-1.28.0.zip
+          mv nginx-1.28.0 nginx-win
+          cd nginx-win
+          
+          echo "@echo off">>start.cmd
+          echo "echo. HTTP Server starting...">>start.cmd
+          echo "start nginx">>start.cmd
+          echo "echo. URL: http://localhost/">>start.cmd
+          echo "echo. ">>start.cmd
+          echo "pause">>start.cmd
+          
+          echo "@echo off">>stop.cmd
+          echo "echo. HTTP Server stopping...">>stop.cmd
+          echo "nginx -s stop">>stop.cmd
+          echo "echo. ">>stop.cmd
+          echo "pause">>stop.cmd
+          
+          cd ..
+      - name: Copy backup
+        run: |
+          cp -fR html nginx-win
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: champion-island-windows
+          path: nginx-win/*
+          if-no-files-found: error
