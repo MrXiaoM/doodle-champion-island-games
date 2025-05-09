@@ -22,6 +22,15 @@
 + 可自定义复制的分享链接，在 `kitsune20.html` 开头可以更改
 + 对视频播放器进行一点点偏移，修正边框没有完全包裹视频的问题
 
+## 用法
+
+**Windows**  
+到 [Github Releases](https://github.com/MrXiaoM/doodle-champion-island-games/releases/latest) 或 [Github Actions](https://github.com/MrXiaoM/doodle-champion-island-games/actions) 下载 `champion-island-windows.zip` 并解压。
++ 运行 `start.bat` 开启 HTTP 服务器
++ 运行 `stop.bat` 关闭 HTTP 服务器
+
+开启 HTTP 服务器后，访问 `http://localhost/` 即可。如需更改端口，详见 `/conf/nginx.conf`。
+
 ## 版权声明
 
 《冠军岛运动会》由 [Google LLC](https://www.google.com/) 和 [STUDIO4°C](https://www.studio4c.co.jp/) 版权所有。本仓库、仓库主以及贡献者，与版权所有者无从属关系。

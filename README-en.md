@@ -22,6 +22,15 @@ Other changes below
 + Customizable copy share link. You can change it in the beginning of `kitsune20.html`.
 + Offset the video player, to fix the issues that the preload frame not covered the whole video.
 
+## Usage
+
+**Windows**  
+Open [Github Releases](https://github.com/MrXiaoM/doodle-champion-island-games/releases/latest) or [Github Actions](https://github.com/MrXiaoM/doodle-champion-island-games/actions) to download `champion-island-windows.zip` and decompress it.
++ Execute `start.bat` to start HTTP server
++ Execute `stop.bat` to stop HTTP server
+
+After started HTTP server, just access to `http://localhost/`. If you want to change port, see `/conf/nginx.conf`.
+
 ## Copyright Notice
 
 The Champion Island Games is copyright by [Google LLC](https://www.google.com/) and [STUDIO4°C](https://www.studio4c.co.jp/). This repository, repository owner and contributers have no affiliation with the copyright owner.
